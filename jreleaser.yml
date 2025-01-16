@@ -1,0 +1,45 @@
+project:
+  name: test-project
+  description: Project Paperino
+  links:
+    homepage: https://{{repoHost}}/{{repoOwner}}/{{repoName}}
+    faq: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/discussions
+  authors:
+    - Thomas Vitale
+  license: Apache-2.0
+  inceptionYear: "2025"
+  version: 1.0.0
+
+release:
+  github:
+    releaseName: '{{tagName}}'
+    overwrite: true
+    sign: true
+    discussionCategoryName: Announcements
+    issues:
+      enabled: true
+    changelog:
+      formatted: ALWAYS
+      preset: conventional-commits
+      contributors:
+        format: '- {{contributorName}}{{#contributorUsernameAsLink}} ({{.}}){{/contributorUsernameAsLink}}'
+      extraProperties:
+        categorizeScopes: true
+      labelers:
+        - label: 'dependencies'
+          title: 'regex:^(?:deps(?:\(.*\))?!?):\s.*'
+          order: 120
+      categories:
+        - title: '⚙️ Dependencies'
+          key: 'dependencies'
+          order: 70
+          labels:
+            - 'dependencies'
+      hide:
+        categories:
+          - 'merge'
+        contributors:
+          - 'GitHub'
+          - 'dependabot'
+      replacers:
+        - search: 'deps: '
