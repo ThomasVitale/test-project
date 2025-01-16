@@ -14,7 +14,7 @@ release:
   github:
     releaseName: '{{tagName}}'
     overwrite: true
-    sign: true
+    sign: false
     discussionCategoryName: Announcements
     issues:
       enabled: true
