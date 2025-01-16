@@ -63,3 +63,10 @@ jobs:
           path: |
             out/jreleaser/trace.log
             out/jreleaser/output.properties
+      
+      - name: Deliver application
+        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3.0.0
+        with:
+          token: ${{ secrets.TEST_DISPATCH_TOKEN }}
+          repository: ThomasVitale/test-website
+          event-type: docs-update
