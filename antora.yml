@@ -1,0 +1,5 @@
+name: project-paperino
+version: true
+title: Project Paperino
+nav:
+- modules/ROOT/nav.adoc
