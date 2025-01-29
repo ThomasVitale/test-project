@@ -9,7 +9,7 @@ Project Paperino provides comprehensive authentication and authorization support
 
 Project Paperino supports several authentication methods out of the box:
 
-* OAuth 2.1 / OpenID Connect
+* OAuth 2.1/OpenID Connect
 * JWT Authentication
 * Basic Authentication
 * Form-based Authentication
